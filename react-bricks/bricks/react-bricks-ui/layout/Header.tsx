@@ -37,90 +37,91 @@ const Header: types.Brick<HeaderProps> = ({
   useOnClickOutside(ref, () => setMobileMenuOpen(false))
 
   return (
-    <Section
-      backgroundColor={backgroundColor}
-      borderBottom={borderBottom ? 'full' : 'none'}
-    >
-      <nav className="py-5 px-5 sm:mx-[5.55555%] xl:mx-[11.1111%] flex justify-start items-center">
-        <Link
-          href="/"
-          aria-label="home"
-          className="inline-flex py-1.5 px-2 mr-6"
-        >
-          <Image
-            propName="logo"
-            alt="Logo"
-            maxWidth={300}
-            imageClassName="block w-32 h-7 object-contain object-left"
-          />
-        </Link>
-        <div className="hidden lg:flex items-center space-x-2">
-          <Repeater
-            propName="menuItems"
-            itemProps={{ mobileRef: ref, setMobileMenuOpen }}
-          />
-        </div>
-        <div className="hidden lg:block ml-auto">
-          <Repeater
-            propName="buttons"
-            // No local link to avoid prefetching
-            // of the Admin bundle in case of link
-            // to Edit content
-            itemProps={{ simpleAnchorLink: true }}
-            renderWrapper={(item) => (
-              <div
-                key={item.key}
-                className="flex flex-row space-x-5 items-center justify-end"
-              >
-                {item}
-              </div>
-            )}
-          />
-        </div>
+    <></>
+    // <Section
+    //   backgroundColor={backgroundColor}
+    //   borderBottom={borderBottom ? 'full' : 'none'}
+    // >
+    //   <nav className="py-5 px-5 sm:mx-[5.55555%] xl:mx-[11.1111%] flex justify-start items-center">
+    //     <Link
+    //       href="/"
+    //       aria-label="home"
+    //       className="inline-flex py-1.5 px-2 mr-6"
+    //     >
+    //       <Image
+    //         propName="logo"
+    //         alt="Logo"
+    //         maxWidth={300}
+    //         imageClassName="block w-32 h-7 object-contain object-left"
+    //       />
+    //     </Link>
+    //     <div className="items-center hidden space-x-2 lg:flex">
+    //       <Repeater
+    //         propName="menuItems"
+    //         itemProps={{ mobileRef: ref, setMobileMenuOpen }}
+    //       />
+    //     </div>
+    //     <div className="hidden ml-auto lg:block">
+    //       <Repeater
+    //         propName="buttons"
+    //         // No local link to avoid prefetching
+    //         // of the Admin bundle in case of link
+    //         // to Edit content
+    //         itemProps={{ simpleAnchorLink: true }}
+    //         renderWrapper={(item) => (
+    //           <div
+    //             key={item.key}
+    //             className="flex flex-row items-center justify-end space-x-5"
+    //           >
+    //             {item}
+    //           </div>
+    //         )}
+    //       />
+    //     </div>
 
-        {/* DARK MODE BUTTON DESKTOP */}
-        {mounted && (
-          <button
-            type="button"
-            className="flex items-center justify-center w-8 h-8 mr-4 ml-auto lg:ml-8 text-gray-400 dark:text-gray-200"
-            onClick={toggleColorMode}
-          >
-            {!isDarkColorMode ? (
-              <BsMoonFill />
-            ) : (
-              <BsSunFill className="text-xl" />
-            )}
-          </button>
-        )}
+    //     {/* DARK MODE BUTTON DESKTOP */}
+    //     {mounted && (
+    //       <button
+    //         type="button"
+    //         className="flex items-center justify-center w-8 h-8 ml-auto mr-4 text-gray-400 lg:ml-8 dark:text-gray-200"
+    //         onClick={toggleColorMode}
+    //       >
+    //         {!isDarkColorMode ? (
+    //           <BsMoonFill />
+    //         ) : (
+    //           <BsSunFill className="text-xl" />
+    //         )}
+    //       </button>
+    //     )}
 
-        <div
-          ref={ref}
-          className="relative lg:hidden flex items-center h-full sm:gap-x-4"
-        >
-          <button
-            className="group p-1 w-7 h-7 flex justify-center items-center rounded-[5px] bg-gray-200 dark:bg-transparent hover:bg-sky-500/20 dark:hover:bg-sky-500/40 hover:text-sky-600 dark:hover:text-sky-500 focus:bg-sky-500/20 dark:focus:bg-sky-500/40 focus:text-sky-600 dark:focus:text-sky-500"
-            onClick={() => setMobileMenuOpen((current) => !current)}
-          >
-            {mobileMenuOpen ? (
-              <FiX className="text-gray-600 dark:text-white" size={18} />
-            ) : (
-              <FiMenu className="text-gray-600 dark:text-white" size={20} />
-            )}
-          </button>
-          {mobileMenuOpen && (
-            <div className="absolute top-8 right-0 w-64 bg-white p-5 border rounded-lg shadow-lg z-10">
-              <Repeater
-                propName="menuItems"
-                itemProps={{
-                  mobileRef: ref,
-                  setMobileMenuOpen,
-                }}
-              />
-            </div>
-          )}
-        </div>
-      </nav>
-    </Section>
+    //     <div
+    //       ref={ref}
+    //       className="relative flex items-center h-full lg:hidden sm:gap-x-4"
+    //     >
+    //       <button
+    //         className="group p-1 w-7 h-7 flex justify-center items-center rounded-[5px] bg-gray-200 dark:bg-transparent hover:bg-sky-500/20 dark:hover:bg-sky-500/40 hover:text-sky-600 dark:hover:text-sky-500 focus:bg-sky-500/20 dark:focus:bg-sky-500/40 focus:text-sky-600 dark:focus:text-sky-500"
+    //         onClick={() => setMobileMenuOpen((current) => !current)}
+    //       >
+    //         {mobileMenuOpen ? (
+    //           <FiX className="text-gray-600 dark:text-white" size={18} />
+    //         ) : (
+    //           <FiMenu className="text-gray-600 dark:text-white" size={20} />
+    //         )}
+    //       </button>
+    //       {mobileMenuOpen && (
+    //         <div className="absolute right-0 z-10 w-64 p-5 bg-white border rounded-lg shadow-lg top-8">
+    //           <Repeater
+    //             propName="menuItems"
+    //             itemProps={{
+    //               mobileRef: ref,
+    //               setMobileMenuOpen,
+    //             }}
+    //           />
+    //         </div>
+    //       )}
+    //     </div>
+    //   </nav>
+    // </Section>
   )
 }
 

@@ -25,47 +25,48 @@ const Footer: types.Brick<FooterProps> = ({
   siteUrl,
 }) => {
   return (
-    <footer>
-      <Section
-        backgroundColor={backgroundColor}
-        borderTop={borderTop}
-        borderBottom={borderBottom}
-      >
-        <Container
-          paddingTop={paddingTop}
-          paddingBottom={paddingBottom}
-          className="flex justify-between flex-wrap"
-        >
-          <div className="w-full mb-12 lg:w-auto lg:mb-0 lg:mr-8">
-            <Link href={siteUrl} className="block mb-4">
-              <Image
-                propName="logo"
-                alt="Logo"
-                maxWidth={300}
-                imageClassName="w-48 h-7 object-contain object-left"
-              />
-            </Link>
-            <RichText
-              propName="copyright"
-              placeholder="Copyright notice"
-              renderBlock={({ children }) => (
-                <p className={`text-sm ${textColors.GRAY_500}`}>{children}</p>
-              )}
-              allowedFeatures={[types.RichTextFeatures.Link]}
-              renderLink={({ children, href }) => (
-                <Link
-                  href={href}
-                  className="text-sky-500 hover:text-sky-600 hover:-translate-y-px transition-all ease-out duration-150"
-                >
-                  {children}
-                </Link>
-              )}
-            />
-          </div>
-          <Repeater propName="columns" />
-        </Container>
-      </Section>
-    </footer>
+    <></>
+    // <footer>
+    //   <Section
+    //     backgroundColor={backgroundColor}
+    //     borderTop={borderTop}
+    //     borderBottom={borderBottom}
+    //   >
+    //     <Container
+    //       paddingTop={paddingTop}
+    //       paddingBottom={paddingBottom}
+    //       className="flex flex-wrap justify-between"
+    //     >
+    //       <div className="w-full mb-12 lg:w-auto lg:mb-0 lg:mr-8">
+    //         <Link href={siteUrl} className="block mb-4">
+    //           <Image
+    //             propName="logo"
+    //             alt="Logo"
+    //             maxWidth={300}
+    //             imageClassName="w-48 h-7 object-contain object-left"
+    //           />
+    //         </Link>
+    //         <RichText
+    //           propName="copyright"
+    //           placeholder="Copyright notice"
+    //           renderBlock={({ children }) => (
+    //             <p className={`text-sm ${textColors.GRAY_500}`}>{children}</p>
+    //           )}
+    //           allowedFeatures={[types.RichTextFeatures.Link]}
+    //           renderLink={({ children, href }) => (
+    //             <Link
+    //               href={href}
+    //               className="transition-all duration-150 ease-out text-sky-500 hover:text-sky-600 hover:-translate-y-px"
+    //             >
+    //               {children}
+    //             </Link>
+    //           )}
+    //         />
+    //       </div>
+    //       <Repeater propName="columns" />
+    //     </Container>
+    //   </Section>
+    // </footer>
   )
 }
 
