@@ -1,0 +1,72 @@
+/* ========================================
+   COLOR TOKENS
+   Minimal Mono Ivory — off-white paper, near-black ink,
+   a single amber accent used sparingly.
+   ======================================== */
+
+@theme {
+  /* ===================
+     CORE PALETTE
+     --color-bg     = raised surface (cards, header)
+     --color-bg-alt = page background
+     =================== */
+  --color-bg: #ffffff;
+  --color-bg-alt: #faf9f7;
+  --color-fg: #1f1f1f;
+  --color-fg-bold: #111111;
+  --color-fg-light: #6b6b6b;
+
+  /* ===================
+     ACCENT — amber
+     The one accent color on this site: structure, links,
+     active state, and live/measured values alike.
+     =================== */
+  --color-accent: #b45309;
+  --color-accent-hover: #92400e;
+
+  /* Filled controls need their own pair. A link accent is tuned for contrast
+     against the page; reusing it as a button background put white text on it,
+     which fails badly once the accent lightens for dark mode. */
+  --color-accent-fill: #d97706;
+  --color-accent-fill-hover: #b45309;
+  --color-on-accent: #ffffff;
+  --color-accent-light: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  --color-accent-underline: color-mix(in srgb, var(--color-accent) 32%, transparent);
+  --color-accent-underline-strong: color-mix(in srgb, var(--color-accent) 55%, transparent);
+
+  /* ===================
+     SIGNAL — reuses the single accent
+     Reserved for live/measured values and the
+     current-position marker. Never decorative.
+     --color-signal      text-safe on page bg (AA)
+     --color-signal-mark graphic use only (ticks, dots, rules)
+     =================== */
+  --color-signal: #b45309;
+  --color-signal-mark: #d97706;
+
+  /* ===================
+     BORDER COLORS
+     Hairlines do the structural work here, so they are
+     tinted with the ink rather than pure black.
+     =================== */
+  --color-border: rgba(17, 17, 17, 0.14);
+  --color-border-bg: rgba(17, 17, 17, 0.08);
+
+  /* Structural hairlines are meant to be quiet and sit near 1.5:1, which is
+     fine for dividing content but not for the only visible edge of a
+     control. Interactive boundaries use this instead, at 3:1 against paper. */
+  --color-control-border: #6b6b6b;
+  --color-border-alt: rgba(17, 17, 17, 0.24);
+
+  /* ===================
+     SURFACE TOKENS
+     =================== */
+  --color-surface-subtle: rgba(17, 17, 17, 0.035);
+  --color-surface-hover: rgba(17, 17, 17, 0.06);
+  --color-fg-muted: rgba(17, 17, 17, 0.55);
+
+  /* ===================
+     SEMANTIC COLORS
+     =================== */
+  --color-overlay-darker: rgba(0, 0, 0, 0.45);
+}

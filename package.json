@@ -1,49 +1,82 @@
 {
   "name": "louay-baccary-portfolio",
-  "private": true,
-  "license": "SEE LICENSE IN LICENSE",
-  "version": "2.0.0-beta.0",
-  "author": "",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "export": "npm run build && next export && mv out _static"
+  "version": "1.0.0",
+  "homepage": "https://louay-baccary-portfolionextjs.vercel.app/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/louay-baccary/louay-baccary-portfolio.git"
   },
   "engines": {
-    "node": "14.x"
+    "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
+  },
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "biome check .",
+    "type-check": "tsc --noEmit",
+    "format": "biome format --write . && prettier --write \"**/*.{md,css,scss}\"",
+    "format:check": "biome format . && prettier --check \"**/*.{md,css,scss}\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
+    "predeploy": "npm run build",
+    "analyze": "ANALYZE=true npm run build",
+    "og": "node scripts/generate-og.mjs",
+    "og:check": "node scripts/check-og.mjs",
+    "verify-export": "node scripts/verify-export.mjs"
   },
   "dependencies": {
-    "atropos": "^1.0.2",
-    "dayjs": "^1.11.7",
-    "email-validator": "^2.0.4",
-    "jsonp": "^0.2.1",
-    "next": "^13.2.4",
-    "next-themes": "^0.2.1",
-    "pigeon-maps": "^0.21.3",
-    "prism-theme-night-owl": "^1.4.0",
-    "prismjs": "^1.29.0",
-    "react": "^18.2.0",
-    "react-bricks": "^3.9.2",
-    "react-dom": "^18.2.0",
-    "react-scroll-parallax": "^3.4.2",
-    "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fortawesome/fontawesome-svg-core": "^7.3.1",
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/free-regular-svg-icons": "^7.3.1",
+    "@fortawesome/react-fontawesome": "^3.5.0",
+    "@next/third-parties": "^16.2.12",
+    "@tailwindcss/postcss": "^4.3.3",
+    "dayjs": "^1.11.21",
+    "gray-matter": "^4.0.3",
+    "markdown-to-jsx": "^9.9.0",
+    "next": "^16.2.12",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.3",
-    "@types/node": "^18.15.5",
-    "@types/react": "^18.0.28",
-    "autoprefixer": "^10.4.14",
-    "concurrently": "^7.6.0",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7",
-    "typescript": "^5.0.2"
+    "@biomejs/biome": "^2.5.6",
+    "@next/bundle-analyzer": "^16.2.12",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^7.0.0",
+    "@testing-library/react": "^16.3.2",
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.4",
+    "@vitest/coverage-v8": "^4.1.10",
+    "jsdom": "^30.0.0",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.7"
   },
-  "prettier": {
-    "printWidth": 80,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5"
+  "overrides": {
+    "postcss": "^8.5.23",
+    "sharp": "^0.35.3",
+    "js-yaml": "^3.15.1",
+    "nanoid": "^3.3.18"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

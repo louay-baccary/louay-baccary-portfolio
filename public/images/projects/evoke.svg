@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#7c2d12"/>
+  <text x="300" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="white">Evoke Hub</text>
+  <text x="300" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" fill="white">Payment System</text>
+</svg>

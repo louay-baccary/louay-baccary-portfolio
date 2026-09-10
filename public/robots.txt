@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://louay-baccary-portfolionextjs.vercel.app/sitemap.xml

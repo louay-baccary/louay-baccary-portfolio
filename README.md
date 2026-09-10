@@ -1,24 +1,61 @@
-# React Bricks starter with Next.js with Tailwind CSS and React Bricks UI
+# Louay Baccary: Personal Site
 
-Kick-start your project with this boilerplate for a complete Next.js website based on [React Bricks](https://reactbricks.com), with both the front-end and admin dashboard.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-## 🚀 Quick start
+The source for [my portfolio](https://louay-baccary-portfolionextjs.vercel.app), a
+portfolio, résumé, project archive, and writing site built with
+[Next.js](https://nextjs.org/), [React](https://react.dev/),
+[TypeScript](https://www.typescriptlang.org/), and
+[Tailwind CSS](https://tailwindcss.com/).
 
-We suggest that you use the CLI and choose this starter.  
-In this way you will have the credentials already set up in a `.env.local` file:
+**[Visit the live site →](https://louay-baccary-portfolionextjs.vercel.app)**
+
+Built on top of [mldangelo/personal-site](https://github.com/mldangelo/personal-site)
+(MIT licensed), rebranded with my own content, projects, and copy.
+
+## What is here
+
+- A statically exported Next.js 16 site.
+- A responsive light/dark design system built from semantic CSS tokens.
+- Markdown writing with drafts, RSS, and page metadata.
+- A filterable résumé that still prints in full.
+- Tests for components, content, metadata, and the final static export.
+
+## Get started
+
+With [nvm](https://github.com/nvm-sh/nvm) installed:
 
 ```bash
-npx create-reactbricks-app
-# or
-yarn create reactbricks-app
+git clone https://github.com/louay-baccary/louay-baccary-portfolio.git
+cd louay-baccary-portfolio
+nvm install
+npm ci
+npm run dev
 ```
 
-Otherwise you can directly clone this repo:
+If you use another version manager, choose a release accepted by `engines.node`
+in `package.json`.
+
+## Commands
 
 ```bash
-git clone https://github.com/reactbricks/nextjs-starter-reactbricks-tailwind your-project
+npm run dev             # Start the development server
+npm run format          # Format with Prettier and Biome
+npm run lint            # Run Biome checks
+npm run type-check      # Run TypeScript
+npm test                # Run Vitest
+npm run build           # Build the production static export
+npm run verify-export   # Inspect the generated HTML and XML
+npm run og              # Regenerate the share card
+npm run og:check        # Verify the committed share card is current
 ```
 
-## 📖 Documentation
+## Deploy
 
-Please, read our documentation at [Reactbricks.com](https://reactbricks.com).
+Deployed on [Vercel](https://vercel.com), which builds this static export
+automatically on push to `main`.
+
+## License
+
+[MIT](./LICENSE). Original template by Michael D'Angelo, use it however you
+want.
