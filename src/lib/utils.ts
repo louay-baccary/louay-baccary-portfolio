@@ -5,7 +5,7 @@
 import profile from '@/data/profile.json';
 
 // Site configuration
-export const SITE_URL = 'https://louay-baccary-portfolionextjs.vercel.app';
+export const SITE_URL = 'https://louay-baccary.vercel.app';
 export const AUTHOR_NAME = profile.name;
 /**
  * The portrait. Used for JSON-LD `image`, where the value should be a picture

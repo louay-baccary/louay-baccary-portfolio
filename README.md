@@ -2,24 +2,33 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-The source for [my portfolio](https://louay-baccary-portfolionextjs.vercel.app), a
-portfolio, résumé, project archive, and writing site built with
+The source for [my portfolio](https://louay-baccary.vercel.app):
+a résumé, project archive, and reading list, built with
 [Next.js](https://nextjs.org/), [React](https://react.dev/),
 [TypeScript](https://www.typescriptlang.org/), and
 [Tailwind CSS](https://tailwindcss.com/).
 
-**[Visit the live site →](https://louay-baccary-portfolionextjs.vercel.app)**
+**[Visit the live site →](https://louay-baccary.vercel.app)**
 
-Built on top of [mldangelo/personal-site](https://github.com/mldangelo/personal-site)
-(MIT licensed), rebranded with my own content, projects, and copy.
+## Credit
+
+This site is built on top of [mldangelo/personal-site](https://github.com/mldangelo/personal-site)
+by Michael D'Angelo (MIT licensed), an excellent, actively maintained Next.js
+portfolio template. I forked its design system, page architecture, and test
+suite, then rebranded and rebuilt the content, projects, and pages around my
+own work. See the [License](#license) section for the full attribution.
 
 ## What is here
 
-- A statically exported Next.js 16 site.
+- **Résumé** with real work history, skills, and certifications, plus a
+  downloadable PDF.
+- **Projects**, production platforms I've built and shipped, with live demo
+  videos where available.
+- **Books**, what I'm reading and have read, with notes and takeaways per
+  book.
 - A responsive light/dark design system built from semantic CSS tokens.
-- Markdown writing with drafts, RSS, and page metadata.
-- A filterable résumé that still prints in full.
-- Tests for components, content, metadata, and the final static export.
+- A statically exported Next.js 16 site, tested end to end (components,
+  content, metadata, and the final static export).
 
 ## Get started
 
@@ -57,5 +66,8 @@ automatically on push to `main`.
 
 ## License
 
-[MIT](./LICENSE). Original template by Michael D'Angelo, use it however you
-want.
+[MIT](./LICENSE). Original template and architecture by
+[Michael D'Angelo](https://github.com/mldangelo) (see
+[mldangelo/personal-site](https://github.com/mldangelo/personal-site)),
+used and adapted with thanks. Content, projects, and copy on top of that
+template are mine.
